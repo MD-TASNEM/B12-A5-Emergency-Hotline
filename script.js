@@ -7,7 +7,7 @@ for (let hearts of heart) {
   hearts.addEventListener("click", function () {
     // console.log("hearts cliked");
 
-    let heartValue = parseInt(heartpoint.innerText)+1;
+    let heartValue = parseInt(heartpoint.innerText) + 1;
     heartpoint.innerText = heartValue;
     console.log(coinValue);
   });
@@ -23,6 +23,9 @@ for (let cartButton of cartBtns) {
     const name = cartButton.parentNode.parentNode.childNodes[1].innerText;
     const phoneNumber =
       cartButton.parentNode.parentNode.childNodes[5].innerText;
+    const phone = cartButton.childNodes[1].src;
+
+    console.log(phone)
 
     let coinValue = parseInt(coin.innerText) - 20;
     coin.innerText = coinValue;
@@ -32,7 +35,11 @@ for (let cartButton of cartBtns) {
       alert("You don't have enough coins. Please recharge.");
       coin.innerText = 0;
       return;
+    }else{
+      alert(`Calling ${name} ${phoneNumber}.`);
+      return;
     }
+
 
     // const call time = cartButton.;
   });
