@@ -25,23 +25,45 @@ for (let cartButton of cartBtns) {
       cartButton.parentNode.parentNode.childNodes[5].innerText;
     const phone = cartButton.childNodes[1].src;
 
-    console.log(phone)
+    // console.log(phone)
 
     let coinValue = parseInt(coin.innerText) - 20;
     coin.innerText = coinValue;
     // console.log(coinValue);
 
     if (coinValue < 0) {
-      alert("You don't have enough coins. Please recharge.");
+      alert("You don't have enough coins.It costs 20 coins to make a call.");
       coin.innerText = 0;
-      return;
+    //   return;
     }else{
       alert(`Calling ${name} ${phoneNumber}.`);
-      return;
+    //   return;
+
+       const cartcontainer = document.getElementById("cart-container");
+
+    const newCart = document.createElement("div")
+    newCart.innerHTML = `
+          <div
+            class="card w-ful shadow-xl round-4xl bg-gray-100 flex flex-row justify-between items-center max-lg:flex-col p-4 mb-4"
+          >
+            <div class="card-body">
+              <p class="font-bold">${name}</p>
+              <p>${phoneNumber}</p>
+            </div>
+            <p class="text-xs">11:36:58 AM</p>
+          </div>
+
+    `;
+// console.log("newCar");
+cartcontainer.append(newCart);
+
     }
 
 
     // const call time = cartButton.;
+
+
+
   });
 }
 
