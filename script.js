@@ -5,17 +5,15 @@ let copyValue = parseInt(copyTimes.innerText);
 
 // console.log(copyValue);
 
-for (let  copy of  copys) {
+for (let copy of copys) {
   copy.addEventListener("click", function () {
-
     let copyValue = parseInt(copyTimes.innerText) + 1;
     copyTimes.innerText = copyValue;
     console.log(copyValue);
   });
 }
 
-                        // heart Selection
-
+// heart Selection
 
 const heart = document.getElementsByClassName("heart");
 
@@ -32,8 +30,7 @@ for (let hearts of heart) {
   });
 }
 
-                        // call btn Selection
-
+// call btn Selection
 
 const cartBtns = document.getElementsByClassName("cart-btn");
 
@@ -56,15 +53,15 @@ for (let cartButton of cartBtns) {
     if (coinValue < 0) {
       alert("You don't have enough coins.It costs 20 coins to make a call.");
       coin.innerText = 0;
-    //   return;
-    }else{
+      //   return;
+    } else {
       alert(`Calling ${name} ${phoneNumber}.`);
-    //   return;
+      //   return;
 
-       const cartcontainer = document.getElementById("cart-container");
+      const cartcontainer = document.getElementById("cart-container");
 
-    const newCart = document.createElement("div")
-    newCart.innerHTML = `
+      const newCart = document.createElement("div");
+      newCart.innerHTML = `
           <div
             class="card w-ful shadow-xl round-4xl bg-gray-100 flex flex-row justify-between items-center max-lg:flex-col p-4 mb-4"
           >
@@ -76,16 +73,21 @@ for (let cartButton of cartBtns) {
           </div>
 
     `;
-// console.log("newCar");
-cartcontainer.append(newCart);
-
+      // console.log("newCar");
+      cartcontainer.append(newCart);
     }
 
-
     // const call time = cartButton.;
-
-
-
   });
 }
 
+// clear Selection
+
+const clearButtons = document.getElementsByClassName("Clear");
+for (const btn of clearButtons) {
+  btn.addEventListener("click", function () {
+    console.log("Clear button clicked");
+    const cartcontainer = document.getElementById("cart-container");
+    cartcontainer.innerHTML = "";
+  });
+}
