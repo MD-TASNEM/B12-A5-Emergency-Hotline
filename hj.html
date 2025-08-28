@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency Service Directory</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+  />
+</head>
+<body class="bg-green-100">
+
+  <!-- Header -->
+  <header class="flex justify-between bg-white px-10 py-2 items-center">
+    <img src="./assets/logo.png" alt="logo" class="w-10 h-10" />
+    <div class="flex gap-4 items-center">
+      <div class="flex items-center gap-2 bg-green-100 rounded-full px-4">
+        <p id="heartpoint">0</p>
+        <img src="./assets/heart.png" alt="heart" class="w-5 h-5" />
+      </div>
+      <div class="flex items-center gap-2 bg-green-100 rounded-full px-4">
+        <p id="coin">100</p>
+        <img src="./assets/coin.png" alt="coin" class="w-5 h-5" />
+      </div>
+      <div class="flex items-center gap-2 bg-green-100 rounded-full px-4">
+        <p id="copyTimes">0</p>
+        <span>Copy</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="bg-gradient-to-r from-green-900 via-green-800 to-green-900 text-white text-center p-6">
+    <img src="./assets/logo-dark.png" alt="logo" class="mx-auto w-20 h-20 mb-4" />
+    <h1 class="text-3xl font-bold mb-2">Emergency Service Directory</h1>
+    <p>Government Emergency Services at Your Fingertip – A Project by Government of Bangladesh</p>
+  </div>
+
+  <!-- Card Section -->
+  <main class="p-4 flex gap-4 flex-wrap justify-center"><main class="p-4 flex flex-col lg:flex-row gap-6 justify-center"><main class="flex flex-col lg:flex-row gap-6 p-4">
+
+  <!-- Left: Cards Section -->
+  <section class="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Card 1 -->
+    <div class="card bg-white shadow-xl rounded-2xl">
+      <div class="flex justify-between p-4">
+        <img src="./assets/emergency.png" alt="Emergency" class="w-10 h-10 p-1 rounded-md hover:bg-red-100" />
+        <button><i class="fa-regular fa-heart text-3xl heart"></i></button>
+      </div>
+      <div class="p-4">
+        <h4 class="text-lg font-bold">National Emergency Number</h4>
+        <p>National Emergency</p>
+        <h4 class="font-bold text-xl hotline-numbe">999</h4>
+        <p>All</p>
+        <div class="flex gap-2 mt-4">
+          <button class="btn btn-outline copy-btn flex-1">
+            <i class="fa-regular fa-copy mr-2"></i> Copy
+          </button>
+          <button class="btn bg-green-600 cart-btn flex-1">
+            <i class="fa-solid fa-phone mr-2"></i> Call
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card bg-white shadow-xl rounded-2xl">
+      <div class="flex justify-between p-4">
+        <img src="./assets/police.png" alt="Police" class="w-10 h-10 p-1 rounded-md hover:bg-green-100" />
+        <button><i class="fa-regular fa-heart text-3xl heart"></i></button>
+      </div>
+      <div class="p-4">
+        <h4 class="text-lg font-bold">Police Helpline</h4>
+        <p>Police</p>
+        <h4 class="font-bold text-xl hotline-numbe">999</h4>
+        <p>Police</p>
+        <div class="flex gap-2 mt-4">
+          <button class="btn btn-outline copy-btn flex-1">
+            <i class="fa-regular fa-copy mr-2"></i> Copy
+          </button>
+          <button class="btn bg-green-600 cart-btn flex-1">
+            <i class="fa-solid fa-phone mr-2"></i> Call
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card bg-white shadow-xl rounded-2xl">
+      <div class="flex justify-between p-4">
+        <img src="./assets/fire-service.png" alt="Fire Service" class="w-10 h-10 p-1 rounded-md hover:bg-red-100" />
+        <button><i class="fa-regular fa-heart text-3xl heart"></i></button>
+      </div>
+      <div class="p-4">
+        <h4 class="text-lg font-bold">Fire Service</h4>
+        <p>Fire Service</p>
+        <h4 class="font-bold text-xl hotline-numbe">999</h4>
+        <p>Fire</p>
+        <div class="flex gap-2 mt-4">
+          <button class="btn btn-outline copy-btn flex-1">
+            <i class="fa-regular fa-copy mr-2"></i> Copy
+          </button>
+          <button class="btn bg-green-600 cart-btn flex-1">
+            <i class="fa-solid fa-phone mr-2"></i> Call
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card bg-white shadow-xl rounded-2xl">
+      <div class="flex justify-between p-4">
+        <img src="./assets/ambulance.png" alt="Ambulance" class="w-10 h-10 p-1 rounded-md hover:bg-red-100" />
+        <button><i class="fa-regular fa-heart text-3xl heart"></i></button>
+      </div>
+      <div class="p-4">
+        <h4 class="text-lg font-bold">Ambulance Service</h4>
+        <p>Ambulance</p>
+        <h4 class="font-bold text-xl hotline-numbe">1994-999999</h4>
+        <p>Health</p>
+        <div class="flex gap-2 mt-4">
+          <button class="btn btn-outline copy-btn flex-1">
+            <i class="fa-regular fa-copy mr-2"></i> Copy
+          </button>
+          <button class="btn bg-green-600 cart-btn flex-1">
+            <i class="fa-solid fa-phone mr-2"></i> Call
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card bg-white shadow-xl rounded-2xl">
+      <div class="flex justify-between p-4">
+        <img src="./assets/emergency.png" alt="Women & Child" class="w-10 h-10 p-1 rounded-md hover:bg-red-100" />
+        <button><i class="fa-regular fa-heart text-3xl heart"></i></button>
+      </div>
+      <div class="p-4">
+        <h4 class="text-lg font-bold">Women & Child Helpline</h4>
+        <p>Women & Child Helpline</p>
+        <h4 class="font-bold text-xl hotline-numbe">109</h4>
+        <p>Help</p>
+        <div class="flex gap-2 mt-4">
+          <button class="btn btn-outline copy-btn flex-1">
+            <i class="fa-regular fa-copy mr-2"></i> Copy
+          </button>
+          <button class="btn bg-green-600 cart-btn flex-1">
+            <i class="fa-solid fa-phone mr-2"></i> Call
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card bg-white shadow-xl rounded-2xl">
+      <div class="flex justify-between p-4">
+        <img src="./assets/emergency.png" alt="Anti-Corruption" class="w-10 h-10 p-1 rounded-md hover:bg-red-100" />
+        <button><i class="fa-regular fa-heart text-3xl heart"></i></button>
+      </div>
+      <div class="p-4">
+        <h4 class="text-lg font-bold">Anti-Corruption Helpline</h4>
+        <p>Anti-Corruption</p>
+        <h4 class="font-bold text-xl hotline-numbe">106</h4>
+        <p>Govt.</p>
+        <div class="flex gap-2 mt-4">
+          <button class="btn btn-outline copy-btn flex-1">
+            <i class="fa-regular fa-copy mr-2"></i> Copy
+          </button>
+          <button class="btn bg-green-600 cart-btn flex-1">
+            <i class="fa-solid fa-phone mr-2"></i> Call
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card bg-white shadow-xl rounded-2xl">
+      <div class="flex justify-between p-4">
+        <img src="./assets/emergency.png" alt="Electricity" class="w-10 h-10 p-1 rounded-md hover:bg-red-100" />
+        <button><i class="fa-regular fa-heart text-3xl heart"></i></button>
+      </div>
+      <div class="p-4">
+        <h4 class="text-lg font-bold">Electricity Helpline</h4>
+        <p>Electricity Outage</p>
+        <h4 class="font-bold text-xl hotline-numbe">16216</h4>
+        <p>Electricity</p>
+        <div class="flex gap-2 mt-4">
+          <button class="btn btn-outline copy-btn flex-1">
+            <i class="fa-regular fa-copy mr-2"></i> Copy
+          </button>
+          <button class="btn bg-green-600 cart-btn flex-1">
+            <i class="fa-solid fa-phone mr-2"></i> Call
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card bg-white shadow-xl rounded-2xl">
+      <div class="flex justify-between p-4">
+        <img src="./assets/emergency.png" alt="Brac" class="w-10 h-10 p-1 rounded-md hover:bg-red-100" />
+        <button><i class="fa-regular fa-heart text-3xl heart"></i></button>
+      </div>
+      <div class="p-4">
+        <h4 class="text-lg font-bold">Brac Helpline</h4>
+        <p>Brac</p>
+        <h4 class="font-bold text-xl hotline-numbe">16445</h4>
+        <p>NGO</p>
+        <div class="flex gap-2 mt-4">
+          <button class="btn btn-outline copy-btn flex-1">
+            <i class="fa-regular fa-copy mr-2"></i> Copy
+          </button>
+          <button class="btn bg-green-600 cart-btn flex-1">
+            <i class="fa-solid fa-phone mr-2"></i> Call
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="card bg-white shadow-xl rounded-2xl">
+      <div class="flex justify-between p-4">
+        <img src="./assets/Bangladesh-Railway.png" alt="Railway" class="w-10 h-10 p-1 rounded-md hover:bg-red-100" />
+        <button><i class="fa-regular fa-heart text-3xl heart"></i></button>
+      </div>
+      <div class="p-4">
+        <h4 class="text-lg font-bold">Bangladesh Railway Helpline</h4>
+        <p>Bangladesh Railway</p>
+        <h4 class="font-bold text-xl hotline-numbe">163</h4>
+        <p>Travel</p>
+        <div class="flex gap-2 mt-4">
+          <button class="btn btn-outline copy-btn flex-1">
+            <i class="fa-regular fa-copy mr-2"></i> Copy
+          </button>
+          <button class="btn bg-green-600 cart-btn flex-1">
+            <i class="fa-solid fa-phone mr-2"></i> Call
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Right: Call History Section -->
+  <section class="w-full lg:w-96 bg-white rounded-2xl shadow-xl p-4">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl flex items-center gap-2">
+        <i class="fa-regular fa-clock"></i> Call History
+      </h2>
+      <button class="btn bg-green-600 Clear">Clear</button>
+    </div>
+    <div id="cart-container" class="flex flex-col gap-2 max-h-[70vh] overflow-y-auto"></div>
+  </section>
+
+</main>
+</main>
+</main>
+
+  <!-- Call History Section -->
+  <section class="bg-white rounded-xl shadow-xl p-4 m-4 w-80 mx-auto">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl"><i class="fa-regular fa-clock"></i> Call History</h2>
+      <button class="btn bg-green-600 Clear">Clear</button>
+    </div>
+    <div id="cart-container"></div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    // Copy Times
+    const copyTimes = document.getElementById("copyTimes");
+    let copyValue = parseInt(copyTimes.innerText);
+
+    // Copy button
+    const copyButtons = document.querySelectorAll(".copy-btn");
+    copyButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const card = button.closest(".card");
+        const textElement = card.querySelector(".hotline-numbe");
+        const text = textElement.innerText;
+
+        navigator.clipboard.writeText(text)
+          .then(() => {
+            alert("Hotline number কপি হয়েছে!");
+          })
+          .catch(err => console.error(err));
+
+        // Copy counter update
+        copyValue += 1;
+        copyTimes.innerText = copyValue;
+      });
+    });
+
+    // Heart buttons
+    const hearts = document.querySelectorAll(".heart");
+    const heartpoint = document.getElementById("heartpoint");
+    let heartValue = parseInt(heartpoint.innerText);
+    hearts.forEach(h => {
+      h.addEventListener("click", () => {
+        heartValue += 1;
+        heartpoint.innerText = heartValue;
+      });
+    });
+
+    // Call buttons
+    const cartBtns = document.querySelectorAll(".cart-btn");
+    const coin = document.getElementById("coin");
+    let coinValue = parseInt(coin.innerText);
+
+    cartBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const card = btn.closest(".card");
+        const name = card.querySelector(".card-title").innerText;
+        const phoneNumber = card.querySelector(".hotline-numbe").innerText;
+
+        if (coinValue < 20) {
+          alert("You don't have enough coins. It costs 20 coins to make a call.");
+          return;
+        }
+
+        coinValue -= 20;
+        coin.innerText = coinValue;
+        alert(`Calling ${name} ${phoneNumber}.`);
+
+        // Add to call history
+        const cartContainer = document.getElementById("cart-container");
+        const newCart = document.createElement("div");
+        newCart.innerHTML = `
+          <div class="card bg-gray-100 p-4 rounded-xl mb-2 flex justify-between items-center">
+            <div>
+              <p class="font-bold">${name}</p>
+              <p>${phoneNumber}</p>
+            </div>
+            <p class="text-xs">${new Date().toLocaleTimeString()}</p>
+          </div>
+        `;
+        cartContainer.appendChild(newCart);
+      });
+    });
+
+    // Clear call history
+    const clearButtons = document.querySelectorAll(".Clear");
+    clearButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.getElementById("cart-container").innerHTML = "";
+      });
+    });
+  </script>
+
+</body>
+</html>

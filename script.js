@@ -91,3 +91,28 @@ for (const btn of clearButtons) {
     cartcontainer.innerHTML = "";
   });
 }
+
+
+// copy Selection
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".copy-btn");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const card = button.closest(".card");
+      const textElement = card.querySelector(".hotline-number");
+      if (!textElement) return;
+
+      const text = textElement.innerText;
+
+      navigator.clipboard.writeText(text)
+        .then(() => {
+          alert("Hotline number কপি হয়েছে!");
+        })
+        .catch(err => {
+          console.error("কপি করতে সমস্যা হয়েছে:", err);
+        });
+    });
+  });
+});
