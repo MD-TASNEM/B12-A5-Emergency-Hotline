@@ -3,8 +3,6 @@ const copys = document.getElementsByClassName("copys");
 const copyTimes = document.getElementById("copyTimes");
 let copyValue = parseInt(copyTimes.innerText);
 
-// console.log(copyValue);
-
 for (let copy of copys) {
   copy.addEventListener("click", function () {
     let copyValue = parseInt(copyTimes.innerText) + 1;
@@ -22,8 +20,6 @@ let heartValue = parseInt(heartpoint.innerText);
 
 for (let hearts of heart) {
   hearts.addEventListener("click", function () {
-    // console.log("hearts cliked");
-
     let heartValue = parseInt(heartpoint.innerText) + 1;
     heartpoint.innerText = heartValue;
     console.log(coinValue);
@@ -44,11 +40,8 @@ for (let cartButton of cartBtns) {
       cartButton.parentNode.parentNode.childNodes[5].innerText;
     const phone = cartButton.childNodes[1].src;
 
-    // console.log(phone)
-
     let coinValue = parseInt(coin.innerText) - 20;
     coin.innerText = coinValue;
-    // console.log(coinValue);
 
     if (coinValue < 0) {
       alert("You don't have enough coins.It costs 20 coins to make a call.");
@@ -62,9 +55,7 @@ for (let cartButton of cartBtns) {
 
       const newCart = document.createElement("div");
       const now = new Date();
-const time = now.toLocaleTimeString();
-
-
+      const time = now.toLocaleTimeString();
 
       newCart.innerHTML = `
           <div
@@ -80,11 +71,9 @@ const time = now.toLocaleTimeString();
           </div>
 
     `;
-      // console.log("newCar");
+
       cartcontainer.append(newCart);
     }
-
-    // const call time = cartButton.;
   });
 }
 
@@ -117,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
           alert(`Hotline number copied: ${text}`);
         })
         .catch((err) => {
-          console.error("কপি করতে সমস্যা হয়েছে:", err);
+          console.error("There was a problem copying:", err);
         });
     });
   });
