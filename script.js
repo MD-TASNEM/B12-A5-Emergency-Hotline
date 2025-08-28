@@ -61,6 +61,11 @@ for (let cartButton of cartBtns) {
       const cartcontainer = document.getElementById("cart-container");
 
       const newCart = document.createElement("div");
+      const now = new Date();
+const time = now.toLocaleTimeString();
+
+
+
       newCart.innerHTML = `
           <div
             class="card w-ful shadow-xl round-4xl bg-gray-100 flex flex-row justify-between items-center max-lg:flex-col p-4 mb-4"
@@ -69,7 +74,9 @@ for (let cartButton of cartBtns) {
               <p class="font-bold">${name}</p>
               <p>${phoneNumber}</p>
             </div>
-            <p class="text-xs">11:36:58 AM</p>
+            <p class="text-xs">
+              ${time}
+            </p>
           </div>
 
     `;
@@ -92,13 +99,11 @@ for (const btn of clearButtons) {
   });
 }
 
-
 // copy Selection
-
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".copy-btn");
 
-  buttons.forEach(button => {
+  buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const card = button.closest(".card");
       const textElement = card.querySelector(".hotline-number");
@@ -106,11 +111,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const text = textElement.innerText;
 
-      navigator.clipboard.writeText(text)
+      navigator.clipboard
+        .writeText(text)
         .then(() => {
-          alert("Hotline number কপি হয়েছে!");
+          alert(`Hotline number copied: ${text}`);
         })
-        .catch(err => {
+        .catch((err) => {
           console.error("কপি করতে সমস্যা হয়েছে:", err);
         });
     });
