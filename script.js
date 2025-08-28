@@ -1,3 +1,22 @@
+const copys = document.getElementsByClassName("copys");
+
+const copyTimes = document.getElementById("copyTimes");
+let copyValue = parseInt(copyTimes.innerText);
+
+// console.log(copyValue);
+
+for (let  copy of  copys) {
+  copy.addEventListener("click", function () {
+
+    let copyValue = parseInt(copyTimes.innerText) + 1;
+    copyTimes.innerText = copyValue;
+    console.log(copyValue);
+  });
+}
+
+                        // heart Selection
+
+
 const heart = document.getElementsByClassName("heart");
 
 const heartpoint = document.getElementById("heartpoint");
@@ -12,6 +31,9 @@ for (let hearts of heart) {
     console.log(coinValue);
   });
 }
+
+                        // call btn Selection
+
 
 const cartBtns = document.getElementsByClassName("cart-btn");
 
@@ -67,9 +89,3 @@ cartcontainer.append(newCart);
   });
 }
 
-// const coin = document.getElementById("coin");
-// let coinValue = parseInt(coin.innerText);
-// console.log(coinValue);
-
-// const heartpoint = document.getElementById("heartpoint");
-// let heartValue = parseInt(heartpoint.innerText);
